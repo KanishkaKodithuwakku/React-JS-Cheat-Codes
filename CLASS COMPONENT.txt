@@ -1,0 +1,32 @@
+import React, { Component } from "react";
+
+
+class App extemds component{
+
+ constructor(props){
+ super(props)
+ 
+
+ this.state = {
+  user:[],
+  text:""
+ }
+
+
+}//constructor ends
+
+
+
+
+ render(){
+
+const {user,text} = this.state;
+
+     return(
+        <> </>
+     )
+ }
+
+}
+
+export default App;

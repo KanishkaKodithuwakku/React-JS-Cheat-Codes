@@ -1,0 +1,28 @@
+import React from "react";
+import PropTypes from "prop-types";
+
+const UserList = ({users,OnRemoveUser}) =>{
+
+
+const renderElement = users.length 
+
+? ( usera.map( (user) => <User onRemoveUser={onRemoveUser} {...user}> {user.name} </User>) )
+
+: ( <EmptyMessage> </EmptyMessage> )
+
+
+  return 
+  (
+	<>
+	{renderElement}
+	</>
+  )
+
+
+}
+
+UserList.propTypes = {
+ users: PropTypes.arrayOf(PropTypes.object).isRequired,
+}
+
+export default UserList;

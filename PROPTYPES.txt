@@ -1,0 +1,11 @@
+import PropTypes from "prop-types";
+
+
+UserList.propTypes = {
+  users: PropTypes.array.isRequired, //if users is an array
+  users: PropTypes.arrayOf(PropTypes.object).isRequired, //if users is an array object
+  test: PropTypes.string.isRequired // shortcode ptsr then tab
+  test: PropTypes.func   // shortcode ptf
+  test: PropTypes.number // shortcode ptn
+  test: PropTypes.bool // ptb
+};

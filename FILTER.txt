@@ -1,0 +1,3 @@
+ const filterdUsers = users.filter((user) =>
+      user.name.toLowerCase().indexOf(searchText.toLowerCase()) > -1
+    );

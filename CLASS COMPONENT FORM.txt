@@ -1,0 +1,50 @@
+class UserForm extends Component {
+
+
+this.state = {
+      fname: "",
+      email: "",
+      mobileNumber: "",
+      age: "",
+    };
+
+this.handleOnChangeName = this.handleOnChangeName.bind(this);
+this.handleOnChangeEmail = this.handleOnChangeEmail.bind(this);
+
+
+handleOnChangeName(e) {
+    const { value } = e.target;
+    this.setState({ fname: value });
+  }
+
+handleOnChangeEmail(e) {
+    const { value } = e.target;
+    this.setState({ email: value });
+  }
+
+handleFormData(e) {
+    e.preventDefault();
+
+const { fname, email, mobileNumber, age } = this.state;
+const user = {
+      id: uuidv4(),
+      fname,
+      email,
+      mobile: mobileNumber,
+      age,
+    };
+    this.props.handleAddUserData(user);
+
+render() {
+const { fname, email, mobileNumber, age, cols } = this.state;
+
+
+return (
+<form onSubmit={this.handleFormData} className={`mt-4 ${cols}`}>
+
+<InputWidthLabel
+            label="Full Name"
+            value={fname}
+            onChange={this.handleOnChangeName}
+          />
+

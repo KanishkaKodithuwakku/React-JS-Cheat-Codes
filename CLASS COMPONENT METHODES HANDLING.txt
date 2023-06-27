@@ -1,0 +1,42 @@
+import React, { Component } from "react";
+
+
+class App extemds component{
+
+ constructor(props){
+ super(props)
+ 
+
+ this.state = {
+  user:[],
+  text:""
+ }
+
+this.handleOnchangeSearch = this.handleOnchangeSearch.bind(this);
+
+
+}//constructor ends
+
+  handleOnchangeSearch = (e) => {
+    this.setState({ searchText: e.target.value });
+    console.log(this.state.searchText);
+  };
+
+
+render(){
+
+const {user,text} = this.state;
+
+     return(
+        <> 
+         <SearchBar
+          value={searchText}
+          handleOnchangeSearch={this.handleOnchangeSearch}
+        />
+        </>
+     )
+ }
+
+}
+
+export default App;
